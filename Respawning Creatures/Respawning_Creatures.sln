@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Respawning_Creatures\Shared\Shared.shproj", "{CADB8776-8EED-4E3B-887E-3F82DB5DC35B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subnautica", "Respawning_Creatures\Subnautica\Subnautica.csproj", "{DE48B1D7-0282-416C-AA0F-E74706ABCAFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubnauticaZero", "Respawning_Creatures\SubnauticaZero\SubnauticaZero.csproj", "{463761CD-3643-41EC-82C7-66DB9A970624}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Respawning_Creatures\Shared\Subnautica Extension Library Shared.projitems*{463761cd-3643-41ec-82c7-66db9a970624}*SharedItemsImports = 4
+		Respawning_Creatures\Shared\Subnautica Extension Library Shared.projitems*{cadb8776-8eed-4e3b-887e-3f82db5dc35b}*SharedItemsImports = 13
+		Respawning_Creatures\Shared\Subnautica Extension Library Shared.projitems*{de48b1d7-0282-416c-aa0f-e74706abcafc}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE48B1D7-0282-416C-AA0F-E74706ABCAFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE48B1D7-0282-416C-AA0F-E74706ABCAFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE48B1D7-0282-416C-AA0F-E74706ABCAFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE48B1D7-0282-416C-AA0F-E74706ABCAFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{463761CD-3643-41EC-82C7-66DB9A970624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{463761CD-3643-41EC-82C7-66DB9A970624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{463761CD-3643-41EC-82C7-66DB9A970624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{463761CD-3643-41EC-82C7-66DB9A970624}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72A4E38C-1F07-450E-B56B-E49743F63E72}
+	EndGlobalSection
+EndGlobal
