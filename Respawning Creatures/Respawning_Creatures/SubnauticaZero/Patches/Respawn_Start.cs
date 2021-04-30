@@ -12,12 +12,6 @@ namespace Respawning_Creatures.Patches
         [HarmonyPrefix]
         internal static bool Prefix(Respawn __instance)
         {
-            ErrorMessage.AddMessage("Respawn.Start_Prefix ---");
-
-
-
-
-
 			return true;
         }
 
@@ -27,7 +21,7 @@ namespace Respawning_Creatures.Patches
 			if (__instance?.gameObject == null)
 				return;
 
-			//CoroutineHost.StartCoroutine(Respawner.RespawnCoroutine(__instance));
+			
         }
     }
 }
