@@ -9,6 +9,7 @@
     <Import_RootNamespace>Respawning_Creatures</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Patches\CreatureDeath_OnAttackByCreature.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Patches\CreatureDeath_OnKill.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)QModPatcher.cs" />
   </ItemGroup>

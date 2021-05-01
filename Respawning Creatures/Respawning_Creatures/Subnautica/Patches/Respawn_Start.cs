@@ -1,4 +1,6 @@
 ﻿using HarmonyLib;
+using System.Collections;
+using UnityEngine;
 using UWE;
 
 namespace Respawning_Creatures.Patches
@@ -15,10 +17,21 @@ namespace Respawning_Creatures.Patches
         [HarmonyPostfix]
         internal static void PostFix(Respawn __instance)
         {
-			if (__instance?.gameObject == null) // this should be null if respawn already took place
-				return;
+            if (DayNightCycle.main.timePassed >= (double)__instance.spawnTime) // if this is true respawn would have already happened in method
+                return;
 
-			CoroutineHost.StartCoroutine(Respawner.RespawnCoroutine(__instance));
+            CoroutineHost.StartCoroutine(RespawnCoroutine(__instance));
+        }
+
+        private static IEnumerator RespawnCoroutine(Respawn respawn)
+        {
+            float timePassed = (float)DayNightCycle.main.timePassed;
+            float waitTime = (float)System.Math.Round(respawn.spawnTime - timePassed);
+
+            yield return new WaitForSecondsRealtime(waitTime);
+
+            respawn.Spawn();
+            UnityEngine.Object.Destroy(respawn.gameObject);
         }
     }
 }
