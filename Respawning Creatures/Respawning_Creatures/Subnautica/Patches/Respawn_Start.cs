@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using Respawning_Creatures.Extensions;
 using System.Collections;
 using UnityEngine;
 using UWE;
@@ -20,7 +21,9 @@ namespace Respawning_Creatures.Patches
             if (DayNightCycle.main.timePassed >= (double)__instance.spawnTime) // if this is true respawn would have already happened in method
                 return;
 
-            CoroutineHost.StartCoroutine(RespawnCoroutine(__instance));
+            ErrorMessage.AddMessage(Settings.instance.leviathansRespawn.ToString());
+            if (Settings.instance.leviathansRespawn && !__instance.techType.IsLeviathan())
+                CoroutineHost.StartCoroutine(RespawnCoroutine(__instance));
         }
 
         private static IEnumerator RespawnCoroutine(Respawn respawn)
