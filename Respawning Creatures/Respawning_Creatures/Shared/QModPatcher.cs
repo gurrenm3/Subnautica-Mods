@@ -10,7 +10,7 @@ namespace Respawning_Creatures
     public static class QModPatcher
     {
         public static string modsDir = $"{Environment.CurrentDirectory}\\QMods\\{Assembly.GetExecutingAssembly().GetName().Name}";
-        public const string versionNumber = "1.0.2";
+        public const string versionNumber = "1.0.3";
 
         [QModPatch]
         public static void Patch()
